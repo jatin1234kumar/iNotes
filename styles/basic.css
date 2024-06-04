@@ -1,0 +1,109 @@
+:root{
+    --bgcolor : dodgerblue;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+1rem = 16px;
+
+
+*/
+
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* To remove scrollBar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* basic styles */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexRowCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flexColumnCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.statusBox {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: lightgreen;
+    animation: fade-out 2s ease forwards;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statusinfo {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    opacity: 0;
+    animation: pop-up 1s ease .5s forwards;
+}
+
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }
+
+    80% {
+        opacity: 1;
+        scale: 1.2;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    70% {
+        height: 3rem;
+        opacity: 1;
+    }
+
+    100%{
+        height: 0;
+        opacity: 0;
+        display: none;
+    }
+}
+
+
